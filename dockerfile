@@ -2,7 +2,7 @@ FROM python:3.5
 
 RUN groupadd -r uwsgi && \
     useradd -r -g uwsgi uwsgi && \
-    pip install Flask uwsgi requests
+    pip install Flask uwsgi requests redis
 
 USER uwsgi
 WORKDIR /app
